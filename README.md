@@ -472,7 +472,16 @@ Step 32: Combined Mode Scan
 ```bash
 sudo ./HK-APEX.sh scanme.nmap.org --full --proxy
 ```
+---
 
+```bash
+sudo ./HK-APEX.sh scanme.nmap.org --fast --proxy --stealth
+```
+--- 
+
+```bash
+sudo ./HK-APEX.sh scanme.nmap.org --full --proxy --stealth
+```
 ---
 
 Step 33: View Results
