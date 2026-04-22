@@ -31,20 +31,6 @@
 
 </div>
 
----
-
-## 🎯 What is HK-APEX? 
-
-**One bash command runs 58 Nmap scans — hides your IP with TOR, changes MAC address, bypasses firewalls, extracts CVEs, and gives you a colored report. Automatically.**
-
-| **If you want to...** | **Run this one command** |
-|-----------------------|--------------------------|
-| 🕵️ Anonymous scan | `sudo ./HK-APEX.sh target.com --ghost` |
-| 🔥 Bypass firewalls | `sudo ./HK-APEX.sh target.com --stealth` |
-| 📋 Full security audit | `sudo ./HK-APEX.sh target.com --full` |
-| ⚡ Quick test (2 min) | `sudo ./HK-APEX.sh target.com --fast` |
-
----
 
 ## EDUCATIONAL PURPOSE DISCLAIMER
 
@@ -116,6 +102,8 @@ HK-APEX (Advanced Penetration and Exploitation Framework) is a military-grade Nm
 ---
 
 ## What is HK-APEX
+
+**One bash command runs 58 Nmap scans — hides your IP with TOR, changes MAC address, bypasses firewalls, extracts CVEs, and gives you a colored report. Automatically.**
 
 HK-APEX is a Bash-based automation wrapper around Nmap. It transforms a standard port scanner into a complete offensive security learning framework.
 
