@@ -62,7 +62,7 @@
 ║  The developer is NOT responsible for any misuse of this software.           ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-
+<div/>
 ```
 
 ---
