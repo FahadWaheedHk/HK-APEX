@@ -1,5 +1,5 @@
 
-                           # HK-APEX MASTER FRAMEWORK v1.0
+# HK-APEX MASTER FRAMEWORK v1.0
 
 <div align="center">
 
@@ -91,24 +91,25 @@ Want to... Run this
 
 ---
 
-Table of Contents
+📚 Table of Contents
 
-1. Overview
-2. What is HK-APEX
-3. Features
-4. Step-by-Step Installation
-5. Step-by-Step TOR and Proxychains Setup
-6. How to Use
-7. All Commands and Modes
-8. Output and Results
-9. How It Works
-10. Frequently Asked Questions
-11. Legal Disclaimer
-12. Author
+# Section Click to jump
+1 Overview 🔗
+2 What is HK-APEX 🔗
+3 Features 🔗
+4 Step-by-Step Installation 🔗
+5 Step-by-Step TOR and Proxychains Setup 🔗
+6 How to Use 🔗
+7 All Commands and Modes 🔗
+8 Output and Results 🔗
+9 How It Works 🔗
+10 Frequently Asked Questions 🔗
+11 Legal Disclaimer 🔗
+12 Author 🔗
 
 ---
 
-Overview
+1. Overview
 
 HK-APEX (Advanced Penetration and Exploitation Framework) is a military-grade Nmap automation suite designed for educational purposes, security research, and authorized penetration testing.
 
@@ -122,9 +123,11 @@ Vulnerability Assessment How to find and document CVE vulnerabilities
 Anonymity How TOR and Proxychains work together
 Anti-Forensics How to avoid leaving digital traces
 
+⬆ Back to Top
+
 ---
 
-What is HK-APEX
+2. What is HK-APEX
 
 HK-APEX is a Bash-based automation wrapper around Nmap. It transforms a standard port scanner into a complete offensive security learning framework.
 
@@ -147,9 +150,11 @@ HK-APEX.sh
 └── Cleanup (anti-forensics)
 ```
 
+⬆ Back to Top
+
 ---
 
-Features
+3. Features
 
 Ghost Protocol Features
 
@@ -184,9 +189,11 @@ Phase 6 7 T0 through T5 Timing Templates, Rate Control
 Phase 7 2 IPv6 Basic Scan, IPv6 Discovery
 Phase 8 5 Deep Fragmentation, Extreme Decoys, Ultimate Stealth, Proxy Ultimate
 
+⬆ Back to Top
+
 ---
 
-Step-by-Step Installation
+4. Step-by-Step Installation
 
 Follow these steps in order. Type each command and press Enter.
 
@@ -256,9 +263,11 @@ Step 11: Verify Installation
 ./HK-APEX.sh --help
 ```
 
+⬆ Back to Top
+
 ---
 
-Step-by-Step TOR and Proxychains Setup
+5. Step-by-Step TOR and Proxychains Setup
 
 What is TOR?
 TOR (The Onion Router) routes your internet traffic through a worldwide network of volunteer servers, hiding your real IP address.
@@ -367,9 +376,11 @@ Step 25: Verify MAC Changer
 macchanger --version
 ```
 
+⬆ Back to Top
+
 ---
 
-How to Use
+6. How to Use
 
 Basic command structure:
 
@@ -429,9 +440,11 @@ cat 00_MASTER_REPORT.txt
 cat 00_CVE_LIST.txt
 ```
 
+⬆ Back to Top
+
 ---
 
-All Commands and Modes
+7. All Commands and Modes
 
 Mode Command Ports
 Default sudo ./HK-APEX.sh target Top 1000
@@ -441,9 +454,11 @@ Full sudo ./HK-APEX.sh target --full All 65535
 Ghost sudo ./HK-APEX.sh target --ghost All 65535
 Proxy sudo ./HK-APEX.sh target --proxy All 65535
 
+⬆ Back to Top
+
 ---
 
-Output and Results
+8. Output and Results
 
 After each scan, a new folder is created:
 
@@ -459,9 +474,11 @@ HK-APEX_Scan_YYYYMMDD_HHMMSS/
 └── 58_Proxy_Ultimate.txt
 ```
 
+⬆ Back to Top
+
 ---
 
-How It Works
+9. How It Works
 
 ```
 User executes: sudo ./HK-APEX.sh target.com --ghost
@@ -491,9 +508,11 @@ Results displayed
 Self-destruct countdown (Ghost/Proxy mode)
 ```
 
+⬆ Back to Top
+
 ---
 
-Frequently Asked Questions
+10. Frequently Asked Questions
 
 Why is sudo required?
 
@@ -543,11 +562,14 @@ Ensure this line exists: socks5 127.0.0.1 9050
 sudo apt install -y expect
 ```
 
+⬆ Back to Top
+
 ---
 
-Legal Disclaimer
+11. Legal Disclaimer
 
 ```
+
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                            LEGAL DISCLAIMER                                  ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
@@ -569,15 +591,20 @@ Legal Disclaimer
 ║  The developer assumes NO liability for misuse of this software.            ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
+
 ```
+
+⬆ Back to Top
 
 ---
 
-Author
+12. Author
 
 Fahad Waheed HK
 
 · GitHub: https://github.com/FahadWaheedHk
+
+⬆ Back to Top
 
 ---
 
