@@ -1,4 +1,4 @@
-# HK-APEX MASTER FRAMEWORK v1.0
+# HK-APEX MASTER FRAMEWORK v2.0
 
 <div align="center">
 
@@ -12,9 +12,12 @@
 ║     ██╔══██║██╔═██╗       ██╔══██║██╔═══╝ ██╔══╝   ██╔██╗                    ║
 ║     ██║  ██║██║  ██╗      ██║  ██║██║     ███████╗██╔╝ ██╗                   ║
 ║     ╚═╝  ╚═╝╚═╝  ╚═╝      ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝                   ║
-║                                                                              ║ 
+║                                                                              ║
 ║                     HK-APEX MASTER FRAMEWORK                                 ║
-║                       V E R S I O N   1 . 0                                  ║
+║                       V E R S I O N   2 . 0                                  ║
+║                                                                              ║
+║              [ ENHANCED GHOST PROTOCOL ]                                     ║
+║         [ PROXYCHAINS + TOR + MAC CHANGER + KILL-SWITCH ]                   ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -64,52 +67,54 @@
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [What is HK-APEX](#what-is-hk-apex)
+2. [What is HK-APEX v2.0](#what-is-hk-apex-v20)
 3. [Features](#features)
-4. [Step-by-Step Installation](#step-by-step-installation)
-5. [Step-by-Step TOR and Proxychains Setup](#step-by-step-tor-and-proxychains-setup)
-6. [How to Use](#how-to-use)
-7. [All Commands and Modes](#all-commands-and-modes)
-8. [Output and Results](#output-and-results)
-9. [How It Works](#how-it-works)
-10. [Frequently Asked Questions](#frequently-asked-questions)
-11. [Legal Disclaimer](#legal-disclaimer)
-12. [Author](#author)
+4. [New in v2.0](#new-in-v20)
+5. [Step-by-Step Installation](#step-by-step-installation)
+6. [Step-by-Step TOR and Proxychains Setup](#step-by-step-tor-and-proxychains-setup)
+7. [How to Use](#how-to-use)
+8. [All Commands and Modes](#all-commands-and-modes)
+9. [Output and Results](#output-and-results)
+10. [How It Works](#how-it-works)
+11. [Frequently Asked Questions](#frequently-asked-questions)
+12. [Legal Disclaimer](#legal-disclaimer)
+13. [Author](#author)
 
 ---
 
 ## Overview
 
-HK-APEX (Advanced Penetration and Exploitation Framework) is a military-grade Nmap automation suite designed for educational purposes, security research, and authorized penetration testing.
+HK-APEX v2.0 (Advanced Penetration and Exploitation Framework) is a military-grade Nmap automation suite designed for educational purposes, security research, and authorized penetration testing. This is a complete rewrite with all bugs fixed from previous versions.
 
 ### What You Will Learn
 
 | Topic | What HK-APEX Teaches You |
 |-------|--------------------------|
-| Network Scanning | Eleven different port scanning techniques |
-| Firewall Evasion | Ten methods to bypass IDS and WAF |
+| Network Scanning | 11 different port scanning techniques |
+| Firewall Evasion | 10 methods to bypass IDS and WAF |
 | OS Fingerprinting | How to identify operating systems remotely |
 | Vulnerability Assessment | How to find and document CVE vulnerabilities |
 | Anonymity | How TOR and Proxychains work together |
 | Anti-Forensics | How to avoid leaving digital traces |
+| Evasion Techniques | How to blend scans with legitimate traffic |
 
 ---
 
-## What is HK-APEX
+## What is HK-APEX v2.0
 
 HK-APEX is a Bash-based automation wrapper around Nmap. It transforms a standard port scanner into a complete offensive security learning framework.
 
 ### The Main Script File
 
-The main script file is called `HK-APEX.sh`
+The main script file is called `HK-APEX_MASTER_v2.0.sh`
 
-This single file contains fifty-eight automated scanning modules and all the Ghost Protocol features.
+This single file contains **58 automated scanning modules** and all the Ghost Protocol features.
 
 ### Core Components
 
 ```
 
-HK-APEX.sh
+HK-APEX_MASTER_v2.0.sh
 ├── Discovery Engine
 ├── Scanning Engine (58 techniques)
 ├── Ghost Protocol (evasion)
@@ -124,6 +129,17 @@ HK-APEX.sh
 
 ## Features
 
+### 🎯 New in v2.0
+
+| Feature | Status | Description |
+|---------|--------|-------------|
+| Ctrl+C Handler | ✅ FIXED | Instantly terminates all processes |
+| One Folder Only | ✅ FIXED | No more 100+ folders |
+| TOR Auto-Start | ✅ FIXED | Starts TOR automatically |
+| Cookie Auth | ✅ FIXED | Error 515 resolved |
+| Proxychains Fallback | ✅ FIXED | Graceful handling |
+| Self-Destruct Control | ✅ FIXED | Only in Ghost mode |
+
 ### Ghost Protocol Features
 
 | Feature | Purpose |
@@ -134,6 +150,7 @@ HK-APEX.sh
 | Process Name Spoofing | Script disguises itself as a system process |
 | Cover Traffic | Generates legitimate traffic to blend with scans |
 | Self-Destruct Timer | Automatically deletes all evidence after sixty seconds |
+| VPN Kill-Switch | Blocks traffic if TOR disconnects |
 
 ### Anonymity Features
 
@@ -152,7 +169,7 @@ HK-APEX.sh
 |-------|---------|-------------------|
 | Phase 0 | 1 | Target Discovery |
 | Phase 1 | 11 | SYN, Connect, UDP, Null, FIN, Xmas, ACK, Window, Maimon, IP Protocol, SCTP |
-| Phase 2 | 10 | Decoy, Fragmentation, MTU, Data Length, Source Port, MAC Spoof, Bad Checksum, TTL |
+| Phase 2 | 10 | Decoy, Fragmentation, MTU, Data Length, Source Port, MAC Spoof, Bad Checksum, TTL, Randomize |
 | Phase 3 | 4 | Version Detection, OS Detection, Aggressive Scan, Traceroute |
 | Phase 4 | 8 | Vulnerability, Exploit, Authentication, Brute Force, Malware, Safe, Discovery |
 | Phase 5 | 11 | HTTP, HTTPS, SMB, SSH, FTP, SNMP, DNS Enumeration |
@@ -200,7 +217,7 @@ sudo apt install -y dnsutils
 
 ---
 
-Step 5: Install Expect
+Step 5: Install Expect (for unbuffer)
 
 ```bash
 sudo apt install -y expect
@@ -243,7 +260,7 @@ cd HK-APEX
 Step 10: Make Script Executable
 
 ```bash
-chmod +x HK-APEX.sh
+chmod +x HK-APEX_MASTER_v2.0.sh
 ```
 
 ---
@@ -251,7 +268,7 @@ chmod +x HK-APEX.sh
 Step 11: Verify Installation
 
 ```bash
-./HK-APEX.sh --help
+./HK-APEX_MASTER_v2.0.sh --help
 ```
 
 ---
@@ -272,15 +289,29 @@ Step 12: Install TOR
 
 ```bash
 sudo apt update
-```
-
-```bash
 sudo apt install -y tor
 ```
 
 ---
 
-Step 13: Start TOR Service
+Step 13: Configure TOR Control Port
+
+```bash
+sudo nano /etc/tor/torrc
+```
+
+Add these lines at the end:
+
+```
+ControlPort 9051
+CookieAuthentication 1
+```
+
+Save: Ctrl+X then Y then Enter
+
+---
+
+Step 14: Start TOR Service
 
 ```bash
 sudo systemctl start tor
@@ -288,7 +319,7 @@ sudo systemctl start tor
 
 ---
 
-Step 14: Enable TOR Auto-Start
+Step 15: Enable TOR Auto-Start
 
 ```bash
 sudo systemctl enable tor
@@ -296,7 +327,7 @@ sudo systemctl enable tor
 
 ---
 
-Step 15: Check TOR Status
+Step 16: Check TOR Status
 
 ```bash
 sudo systemctl status tor
@@ -304,7 +335,7 @@ sudo systemctl status tor
 
 ---
 
-Step 16: Verify TOR is Working
+Step 17: Verify TOR is Working
 
 ```bash
 torsocks curl ifconfig.me
@@ -312,19 +343,16 @@ torsocks curl ifconfig.me
 
 ---
 
-Step 17: Install Proxychains
+Step 18: Install Proxychains
 
 ```bash
 sudo apt update
-```
-
-```bash
 sudo apt install -y proxychains4
 ```
 
 ---
 
-Step 18: Configure Proxychains
+Step 19: Configure Proxychains
 
 ```bash
 sudo nano /etc/proxychains4.conf
@@ -340,7 +368,7 @@ Save: Ctrl+X then Y then Enter
 
 ---
 
-Step 19: Verify Proxychains Configuration
+Step 20: Verify Proxychains Configuration
 
 ```bash
 cat /etc/proxychains4.conf | grep socks5
@@ -348,7 +376,7 @@ cat /etc/proxychains4.conf | grep socks5
 
 ---
 
-Step 20: Test Proxychains with TOR
+Step 21: Test Proxychains with TOR
 
 ```bash
 proxychains4 curl ifconfig.me
@@ -356,44 +384,7 @@ proxychains4 curl ifconfig.me
 
 ---
 
-Step 21: Configure TOR Control Port
-
-```bash
-sudo nano /etc/tor/torrc
-```
-
-Uncomment these lines (remove #):
-
-```
-ControlPort 9051
-CookieAuthentication 1
-```
-
-Save: Ctrl+X then Y then Enter
-
----
-
-Step 22: Restart TOR
-
-```bash
-sudo systemctl restart tor
-```
-
----
-
-Step 23: Verify Control Port
-
-```bash
-echo -e "authenticate \"\"\nsignal newnym\nquit" | nc 127.0.0.1 9051
-```
-
----
-
-Step 24: Install MAC Changer
-
-```bash
-sudo apt update
-```
+Step 22: Install MAC Changer
 
 ```bash
 sudo apt install -y macchanger
@@ -401,7 +392,7 @@ sudo apt install -y macchanger
 
 ---
 
-Step 25: Verify MAC Changer
+Step 23: Verify MAC Changer
 
 ```bash
 macchanger --version
@@ -414,77 +405,76 @@ How to Use
 Basic command structure:
 
 ```bash
-sudo ./HK-APEX.sh <target> [mode]
+sudo ./HK-APEX_MASTER_v2.0.sh <target> [mode]
 ```
 
 ---
 
-Step 26: Basic Scan
+Step 24: Basic Scan
 
 ```bash
-sudo ./HK-APEX.sh scanme.nmap.org
+sudo ./HK-APEX_MASTER_v2.0.sh scanme.nmap.org
 ```
 
 ---
 
-Step 27: Fast Scan
+Step 25: Fast Scan
 
 ```bash
-sudo ./HK-APEX.sh scanme.nmap.org --fast
+sudo ./HK-APEX_MASTER_v2.0.sh scanme.nmap.org --fast
 ```
 
 ---
 
-Step 28: Stealth Scan
+Step 26: Stealth Scan
 
 ```bash
-sudo ./HK-APEX.sh scanme.nmap.org --stealth
+sudo ./HK-APEX_MASTER_v2.0.sh scanme.nmap.org --stealth
 ```
 
 ---
 
-Step 29: Full Audit Scan
+Step 27: Full Audit Scan
 
 ```bash
-sudo ./HK-APEX.sh scanme.nmap.org --full
+sudo ./HK-APEX_MASTER_v2.0.sh scanme.nmap.org --full
 ```
 
 ---
 
-Step 30: Ghost Protocol Scan
+Step 28: Ghost Protocol Scan
 
 ```bash
-sudo ./HK-APEX.sh scanme.nmap.org --ghost
+sudo ./HK-APEX_MASTER_v2.0.sh scanme.nmap.org --ghost
 ```
 
 ---
 
-Step 31: Proxy Mode Scan
+Step 29: Proxy Mode Scan
 
 ```bash
-sudo ./HK-APEX.sh scanme.nmap.org --proxy
+sudo ./HK-APEX_MASTER_v2.0.sh scanme.nmap.org --proxy
 ```
 
 ---
 
-Step 32: Combined Mode Scan
+Step 30: Combined Mode Scan
 
 ```bash
-sudo ./HK-APEX.sh scanme.nmap.org --full --proxy
+sudo ./HK-APEX_MASTER_v2.0.sh scanme.nmap.org --full --proxy
 ```
+
+```bash
+sudo ./HK-APEX_MASTER_v2.0.sh scanme.nmap.org --fast --proxy --stealth
+```
+
+```bash
+sudo ./HK-APEX_MASTER_v2.0.sh scanme.nmap.org --full --proxy --stealth
+```
+
 ---
 
-```bash
-sudo ./HK-APEX.sh scanme.nmap.org --fast --proxy --stealth
-```
---- 
-
-```bash
-sudo ./HK-APEX.sh scanme.nmap.org --full --proxy --stealth
-```
----
-
-Step 33: View Results
+Step 31: View Results
 
 ```bash
 cd HK-APEX_Scan_*/
@@ -503,18 +493,25 @@ cat 00_CVE_LIST.txt
 All Commands and Modes
 
 Mode Command Ports
-Default sudo ./HK-APEX.sh target Top 1000
-Fast sudo ./HK-APEX.sh target --fast Top 100
-Stealth sudo ./HK-APEX.sh target --stealth Top 1000
-Full sudo ./HK-APEX.sh target --full All 65535
-Ghost sudo ./HK-APEX.sh target --ghost All 65535
-Proxy sudo ./HK-APEX.sh target --proxy All 65535
+Default sudo ./HK-APEX_MASTER_v2.0.sh target Top 1000
+Fast sudo ./HK-APEX_MASTER_v2.0.sh target --fast Top 100
+Stealth sudo ./HK-APEX_MASTER_v2.0.sh target --stealth Top 1000
+Full sudo ./HK-APEX_MASTER_v2.0.sh target --full All 65535
+Ghost sudo ./HK-APEX_MASTER_v2.0.sh target --ghost All 65535
+Proxy sudo ./HK-APEX_MASTER_v2.0.sh target --proxy All 65535
+
+Combined Mode Examples
+
+Combination Command
+Full + Proxy sudo ./HK-APEX_MASTER_v2.0.sh target --full --proxy
+Fast + Proxy + Stealth sudo ./HK-APEX_MASTER_v2.0.sh target --fast --proxy --stealth
+Full + Proxy + Stealth sudo ./HK-APEX_MASTER_v2.0.sh target --full --proxy --stealth
 
 ---
 
 Output and Results
 
-After each scan, a new folder is created:
+After each scan, a single folder is created:
 
 ```
 HK-APEX_Scan_YYYYMMDD_HHMMSS/
@@ -524,7 +521,9 @@ HK-APEX_Scan_YYYYMMDD_HHMMSS/
 ├── 00_discovery.grep
 ├── 00_BRAIN_DISCOVERY.txt
 ├── 01_SYN_Stealth.txt
-├── ( ... 58 files total ... )
+├── 02_Connect_Scan.txt
+├── 03_UDP_Deep_Scan.txt
+├── ... (58 files total)
 └── 58_Proxy_Ultimate.txt
 ```
 
@@ -533,15 +532,23 @@ HK-APEX_Scan_YYYYMMDD_HHMMSS/
 How It Works
 
 ```
-User executes: sudo ./HK-APEX.sh target.com --ghost
+User executes: sudo ./HK-APEX_MASTER_v2.0.sh target.com --ghost
                     │
 Script checks root and dependencies
+                    │
+TOR auto-starts (if needed)
+                    │
+MAC address randomized (Ghost mode)
+                    │
+VPN Kill-Switch engaged (Ghost mode)
                     │
 Target resolved to IP address
                     │
 Discovery scan finds open ports
                     │
 58 modules executed one by one
+                    │
+Live colored output displayed
                     │
 CVE identifiers extracted
                     │
@@ -556,19 +563,19 @@ Self-destruct countdown (Ghost/Proxy mode)
 
 Frequently Asked Questions
 
-Why is sudo required
+Why is sudo required?
 
 Nmap requires root privileges for SYN scanning, packet fragmentation, and MAC spoofing.
 
-How long does a full scan take
+How long does a full scan take?
 
-A full scan takes fifteen to forty-five minutes depending on network speed.
+A full scan takes 30 to 60 minutes depending on network speed and target.
 
-Can I use HK-APEX without TOR
+Can I use HK-APEX without TOR?
 
 Yes. Only --ghost and --proxy modes use TOR and Proxychains.
 
-Is this legal to use
+Is this legal to use?
 
 Legal uses include:
 
@@ -604,6 +611,41 @@ Ensure this line exists: socks5 127.0.0.1 9050
 sudo apt install -y expect
 ```
 
+Script created too many folders?
+
+This is fixed in v2.0. Only ONE folder is created per scan.
+
+Ctrl+C doesn't work?
+
+This is fixed in v2.0. Pressing Ctrl+C now instantly terminates all processes.
+
+---
+
+Changelog
+
+v2.0 (Current)
+
+· ✅ Complete rewrite with 58 modules
+· ✅ Ghost Protocol with live colored output
+· ✅ TOR + Proxychains dual-layer anonymity
+· ✅ MAC changer and VPN kill-switch
+· ✅ Fixed Ctrl+C handler
+· ✅ Fixed excessive folder creation
+· ✅ Fixed TOR auto-start
+· ✅ Fixed cookie authentication (Error 515)
+· ✅ Fixed Proxychains fallback
+· ✅ Auto CVE extraction
+
+v1.1 (Deprecated)
+
+· Quick scan only (5 modules)
+· Basic fixes
+
+v1.0 (Deprecated)
+
+· Original release
+· Known bugs with Ctrl+C, file creation, TOR
+
 ---
 
 Legal Disclaimer
@@ -613,7 +655,7 @@ Legal Disclaimer
 ║                            LEGAL DISCLAIMER                                  ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
 ║                                                                              ║
-║  HK-APEX is created for EDUCATIONAL PURPOSES ONLY.                          ║
+║  HK-APEX v2.0 is created for EDUCATIONAL PURPOSES ONLY.                     ║
 ║                                                                              ║
 ║  ALLOWED USE:                                                               ║
 ║  - Educational learning and academic study                                  ║
@@ -642,7 +684,7 @@ Fahad Waheed HK
 
 ---
 
-<div align="center">HK-APEX - Learn Network Security. Stay Ethical.
+<div align="center">HK-APEX v2.0 - Learn Network Security. Stay Ethical.
 
 </div>
 ```---
